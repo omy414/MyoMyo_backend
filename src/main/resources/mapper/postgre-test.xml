@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.suda.backend.repository.PostTestRepo">
+
+    <select id="list" resultType="com.suda.backend.dto.list.ListData">
+        SELECT
+            *
+        FROM
+            TEST
+        ORDER BY SEQ ASC
+    </select>
+
+    <update id="update" parameterType="com.suda.backend.dto.list.ListData">
+        UPDATE
+            TEST
+        SET
+            NAME = #{name}
+            ,PW  = #{pw}
+            ,EMAIL = #{email}
+            ,DATE = now()
+        WHERE
+            1=1
+            and SEQ = #{seq}::numeric
+    </update>
+
+    <insert id="insert" parameterType="com.suda.backend.dto.list.ListData">
+        INSERT INTO TEST(
+            SEQ
+            ,NAME
+            ,PW
+            ,EMAIL
+            ,DATE   
+        )VALUES(
+            nextval('seq')
+            ,#{name}
+            ,#{pw}
+            ,#{email}
+            ,NOW()
+        )
+    </insert>
+
+    <delete id="delete" parameterType="com.suda.backend.dto.list.ListData">
+        DELETE FROM TEST 
+        WHERE seq = #{seq}::numeric
+    </delete>
+</mapper>

@@ -1,0 +1,20 @@
+spring:
+  profiles:
+    active: local
+--- # local
+
+spring:
+  config:
+    activate:
+      on-profile: local
+  application:
+    name: myomyo
+  datasource:
+    hikari:
+      master:
+        jdbc-url: jdbc:log4jdbc:postgresql://localhost:5432/postgres
+        driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+        username: postgres
+        password: army0101
+        maximum-pool-size: 20
+
