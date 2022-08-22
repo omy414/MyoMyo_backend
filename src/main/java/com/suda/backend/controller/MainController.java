@@ -27,7 +27,7 @@ public class MainController {
         if("test".equals(key2)){
             ListResponse list = postService.list();
            return list;
-        }
+        } 
         return null;
     }
 
