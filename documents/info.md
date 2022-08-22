@@ -3,6 +3,16 @@
   1.docker 가 설치되어있어야 한다 ( 윈도우의 경우 docker 데스크탑 설치)
   2.jdk1.8이 설치되어있어야한다.
 
+# git 초기 연결 https(GRC) for codeCommit
+ 1. Python 3버전 이상 + pip 9.0.3버전 이상 + Git 1.7.9버전 이상
+ 2. IAM User/Role : AWSCodeCommitFullAccess or AWSCodeCommitPowerUser 권한 가져야 함
+ 3. IAM 에서 액세스 키 생성 ID와 Key 저장하고 User/.aws/ 위치에 credential 파일 넣거나 configure 로 설정 (검색)
+ 4. GRC 설치 -> pip3 install git-remote-codecommit ( cmd 에서 관리자 권한으로 실행 ) pip3 안되면 pip
+    제대로 안됐을때 pip3 uninstall git-remote-codecommit 후 다시 설치
+ 5. git remote -v (상태확인)
+ 6. git remote add origin [grcUrl]
+ 7. git push origin master
+
 
 # 구동 방법 DB
  1. postgres 설치 ( terminal 에서 아래 명령어 실행)
