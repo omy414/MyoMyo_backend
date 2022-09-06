@@ -18,3 +18,21 @@ spring:
         password: army0101
         maximum-pool-size: 20
 
+
+--- # dev
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+  application:
+    name: myomyo
+  datasource:
+    hikari:
+      master:
+        jdbc-url: jdbc:log4jdbc:postgresql://myomyo-db.czz3ntuyvxak.ap-northeast-2.rds.amazonaws.com:5432/myomyodb
+        driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+        username: postgres
+        password: sudasuda25
+        maximum-pool-size: 20
+
