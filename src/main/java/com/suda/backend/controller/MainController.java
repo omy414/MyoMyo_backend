@@ -22,7 +22,7 @@ public class MainController {
     @PostMapping("/list")
     public ListResponse list(HttpServletRequest request){
         String key2 = request.getHeader("postGreKey");
-
+ 
         System.out.println("키 ? : " + key2);
         if("test".equals(key2)){
             ListResponse list = postService.list();
