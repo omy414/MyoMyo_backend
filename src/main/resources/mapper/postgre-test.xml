@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.suda.backend.repository.PostTestRepo">
 
-    <select id="list" resultType="com.suda.backend.dto.list.ListData">
+    <select id="list" resultType="com.suda.backend.dto.main.list.ListData">
         SELECT
             *
         FROM
@@ -10,7 +10,7 @@
         ORDER BY SEQ ASC
     </select>
 
-    <update id="update" parameterType="com.suda.backend.dto.list.ListData">
+    <update id="update" parameterType="com.suda.backend.dto.main.proc.ProcParam">
         UPDATE
             TEST
         SET
@@ -23,7 +23,7 @@
             and SEQ = #{seq}::numeric
     </update>
 
-    <insert id="insert" parameterType="com.suda.backend.dto.list.ListData">
+    <insert id="insert" parameterType="com.suda.backend.dto.main.proc.ProcParam">
         INSERT INTO TEST(
             SEQ
             ,NAME
@@ -39,7 +39,7 @@
         )
     </insert>
 
-    <delete id="delete" parameterType="com.suda.backend.dto.list.ListData">
+    <delete id="delete" parameterType="com.suda.backend.dto.main.del.DeleParam">
         DELETE FROM TEST 
         WHERE seq = #{seq}::numeric
     </delete>

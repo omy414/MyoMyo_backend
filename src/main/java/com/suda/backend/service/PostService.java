@@ -3,8 +3,12 @@ package com.suda.backend.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.suda.backend.dto.list.ListData;
-import com.suda.backend.dto.list.ListResponse;
+import com.suda.backend.dto.main.del.DeleParam;
+import com.suda.backend.dto.main.del.DeleResponse;
+import com.suda.backend.dto.main.list.ListData;
+import com.suda.backend.dto.main.proc.ProcParam;
+import com.suda.backend.dto.main.proc.ProcResponse;
+import com.suda.backend.dto.main.list.ListResponse;
 import com.suda.backend.repository.PostTestRepo;
 
 
@@ -23,19 +27,26 @@ public class PostService {
         return result;
     }
 
-    public int update(ListData listData) {
-        repo.update(listData);
-        return 1;
+    public ProcResponse update(ProcParam procParam) {
+        ProcResponse result = new ProcResponse();
+        repo.update(procParam);
+        result.setSeq(procParam.getSeq()); 
+        return result;
     }
 
-    public int insert(ListData listData){
-        repo.insert(listData);
-        return 1;
+    public ProcResponse insert(ProcParam procParam){
+        ProcResponse result = new ProcResponse();
+        repo.insert(procParam);
+        result.setSeq(procParam.getSeq()); 
+        return result;
     }
 
-    public int delete(ListData listData){
-        repo.delete(listData);
-        return 1;
+    public DeleResponse delete(DeleParam deleParam){
+        DeleResponse result = new DeleResponse();
+        int aa = repo.delete(deleParam);
+        System.out.println("뭐가나오냐냐냥 : " + aa);
+        result.setSeq(aa);
+        return result;
     }
 
 }

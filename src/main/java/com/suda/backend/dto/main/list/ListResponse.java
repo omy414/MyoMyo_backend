@@ -1,4 +1,4 @@
-package com.suda.backend.dto.list;
+package com.suda.backend.dto.main.list;
 
 import java.util.List;
 
