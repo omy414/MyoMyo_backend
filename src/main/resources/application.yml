@@ -3,7 +3,14 @@ spring:
     active: local
 --- # local
 
+server:
+  servlet:
+    register-default-servlet: true
+
 spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
   config:
     activate:
       on-profile: local
@@ -21,7 +28,15 @@ spring:
 
 --- # dev
 
+server:
+  servlet:
+    register-default-servlet: true
+
+
 spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
   config:
     activate:
       on-profile: dev
