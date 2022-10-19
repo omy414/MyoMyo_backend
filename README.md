@@ -1,6 +1,6 @@
 # MyoMyoProject
 
-  ## 개인프로젝트입니다.
+  ## 개인프로젝트 Backend 부분 입니다.
   ------------------
   ### 프로젝트 제작이유
   특별히 어떤 용도로 서비스를 만들어야겠다~ 라는 생각으로 만든 것은 아닙니다.
@@ -23,15 +23,15 @@
   + swagger
   
   ### 프로젝트 특징
-  back 과 front 가 분리되어있으며 각각 따로 git 에 올라가 있습니다.
-  back 은 java 와 springboot 를 활용하였습니다.
-  back 은 오직 rest api 통신만을 하고있습니다.
-  DB 는 리드레플리카 적용으로 select , insert 를 분리하고있습니다.
-  front 는 react 를 활용 비동기 통신은 axios 를 사용하고 있습니다.
-  front 에서 swagger 를 통해 api 문서 및 테스트를 진행 할 수 있습니다.
-  형상관리는 git 과 codecommit 두 곳을 사용하고 있습니다.
-  배포는 jenkins 를 통해 gradle 빌드하여 docker 로 이미지화 해서 올리고 있습니다.
-  ec2 에 현재 배포되어있으며 http://43.200.47.199:8080/swagger-ui/index.html 를 통해 접근이 가능합니다.
+  back 과 front 가 분리되어있으며 각각 따로 git 에 올라가 있습니다.<br/>
+  back 은 java 와 springboot 를 활용하였습니다.<br/>
+  back 은 오직 rest api 통신만을 하고있습니다.<br/>
+  DB 는 리드레플리카 적용으로 select , insert 를 분리하고있습니다.<br/>
+  front 는 react 를 활용 비동기 통신은 axios 를 사용하고 있습니다.<br/>
+  front 에서 swagger 를 통해 api 문서 및 테스트를 진행 할 수 있습니다.<br/>
+  형상관리는 git 과 codecommit 두 곳을 사용하고 있습니다.<br/>
+  배포는 jenkins 를 통해 gradle 빌드하여 docker 로 이미지화 해서 올리고 있습니다.<br/>
+  ec2 에 현재 배포되어있으며 http://43.200.47.199:8080/swagger-ui/index.html 를 통해 접근이 가능합니다.<br/>
 
   ### 현재까지 적용된 공통 모듈 ( Back_end )
   1. Spring MVC 구조의 디렉토리 구성
